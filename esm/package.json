@@ -1,0 +1,65 @@
+{
+  "name": "@thinkeloquent/git-file-identifiers",
+  "version": "0.1.1",
+  "description": "ESM module for Git repository operations and GitHub URL generation",
+  "type": "module",
+  "main": "git-identify.mjs",
+  "exports": {
+    ".": {
+      "import": "./git-identify.mjs",
+      "types": "./types.d.ts"
+    },
+    "./examples": "./examples.mjs"
+  },
+  "files": [
+    "git-identify.mjs",
+    "examples.mjs",
+    "types.d.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "test:watch": "NODE_OPTIONS=--experimental-vm-modules jest --watch",
+    "test:coverage": "NODE_OPTIONS=--experimental-vm-modules jest --coverage",
+    "test:integration": "NODE_OPTIONS=--experimental-vm-modules jest integration.test.mjs",
+    "test:stress": "STRESS_TEST=true NODE_OPTIONS=--experimental-vm-modules jest integration.test.mjs",
+    "test:examples": "node examples.mjs",
+    "test:quick": "node -e \"import('./git-identify.mjs').then(m => console.log('Module loaded:', Object.keys(m)))\"",
+    "lint": "eslint *.mjs"
+  },
+  "keywords": [
+    "git",
+    "github",
+    "url",
+    "repository",
+    "esm",
+    "module",
+    "wasm",
+    "commit",
+    "hash",
+    "blob",
+    "tree",
+    "tag"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@thinkeloquent/git-file-identifiers": "file:.."
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "jest": "^29.7.0",
+    "eslint": "^8.57.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/git-identify"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/git-identify/issues"
+  },
+  "homepage": "https://github.com/yourusername/git-identify#readme"
+}
