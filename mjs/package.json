@@ -1,0 +1,41 @@
+{
+  "name": "git-identify",
+  "version": "2.0.0",
+  "description": "Generate unique, deterministic file identifiers from Git or GitHub metadata for file change detection without reading content",
+  "type": "module",
+  "main": "./src/git-identify.mjs",
+  "exports": {
+    ".": "./src/git-identify.mjs"
+  },
+  "bin": {
+    "git-identify": "./bin/git-identify.js"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "test:watch": "node --test --watch tests/*.test.mjs"
+  },
+  "keywords": [
+    "git",
+    "github",
+    "identifier",
+    "hash",
+    "metadata",
+    "change-detection",
+    "file-tracking",
+    "content-addressable",
+    "cache-invalidation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/username/git-identify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/username/git-identify/issues"
+  },
+  "homepage": "https://github.com/username/git-identify#readme"
+}
